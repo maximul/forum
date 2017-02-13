@@ -1,0 +1,135 @@
+td {
+    padding: 5px;
+    background-color: #eee;
+}
+
+.tshapka {
+    background-color: #369;
+}
+
+#header-new {
+    width: 100%;
+    height: 41px;
+    background:url("/imgs/static/header_bg.png") repeat scroll left top transparent;
+}
+
+#header-new .header-content {
+    width: 1000px;
+    height: 41px;
+    margin: auto;
+    position: relative;
+}
+
+#header-new .navigation {
+    font:19px Arial;
+    position:relative;
+    padding-top: 10px;
+    width: 1000px;
+    height: 41px;
+    margin-left: 0px;
+    background-color: #369;
+}
+
+#header-new ul {
+    padding: 0;
+}
+
+#header-new ul li {
+    display: inline;
+    cursor: pointer;
+    margin-left: 3px;
+}
+
+#header-new ul li a {
+    padding: 12px 16px 10px;
+    color: white;
+    position: relative;
+    font-size: 17px;
+    text-decoration: none; 
+}
+
+#pagination {
+    padding: 0;
+    margin-top: 10px;
+}
+
+#pagination li {
+    display: inline;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#pagination li a {
+    color: blue;
+}
+
+th {
+    padding: 5px;
+    color: orange;
+    text-align: center;
+}
+
+.delete a {
+    color: orange;
+    text-decoration: none;
+}
+
+li a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+li a:hover, li a.active {
+    color: white;
+    text-decoration: none;
+    background-color: #036;
+}
+
+.delete a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.container {
+    width: 1030px;
+    padding: 15px;
+}
+
+#footer{
+    position:relative;
+    overflow:hidden;
+    clear:both;
+    width:100%;
+    background: url('/imgs/static/footer-bg.png') repeat-x left bottom;
+    height:71px;
+}
+
+#footer-inn{
+    position:relative;
+    overflow:hidden;
+    clear:both;
+    width:1000px;
+    min-height:275px;
+    height:auto;
+    margin:0 auto;
+}
+
+p.copyright{
+    display:block;
+    overflow:hidden;
+    clear:both;
+    text-align:center;
+    margin:0;
+    color:#646464;
+    font:normal 15px Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    background:transparent url('/imgs/static/split-wide.png') no-repeat center top;
+    height: 60px;
+    line-height: 60px;
+    margin-top: 20px;
+}
+
+h1 {
+    color: #0c4c80;
+    font: 400 42px Tahoma;
+    height: 52px;
+}
