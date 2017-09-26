@@ -10,9 +10,12 @@
         
         if ($t_content) {
             
-            $sql = "INSERT INTO themes (them_uid, them_date, them_content) VALUES ($uid, '$them_date', '$t_content')";
+            $sql = "INSERT INTO themes (them_uid, them_date, them_content) VALUES ('%d', '%s', '%s')";
+            $query = sprintf($sql, (int)$uid,
+                                mysqli_real_escape_string($link, $them_date),
+                                mysqli_real_escape_string($link, $t_content));
             
-            $result = mysqli_query($link, $sql);
+            $result = mysqli_query($link, $query);
         }        
         
         header("Location: ".$_SERVER["PHP_SELF"]."?start=$start");

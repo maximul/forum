@@ -30,9 +30,15 @@
             if ($u_name&&$email&&$u_psw&&$family&&$name&&$sec_name) {
                 
                 $sql = "INSERT INTO users (u_name, email, u_psw, family, name, sec_name) 
-                                    VALUES ('$u_name', '$email', '$u_psw', '$family', '$name', '$sec_name')";
+                                    VALUES ('%s', '%s', '%s', '%s', '%s', '%s')";
+                $query = sprintf($sql, mysqli_real_escape_string($link, $u_name), 
+                                     mysqli_real_escape_string($link, $email),
+                                     mysqli_real_escape_string($link, $u_psw),
+                                     mysqli_real_escape_string($link, $family),
+                                     mysqli_real_escape_string($link, $name),
+                                     mysqli_real_escape_string($link, $sec_name));
                 
-                $resultat = mysqli_query($link, $sql);            
+                $resultat = mysqli_query($link, $query);            
             } 
         }
     }

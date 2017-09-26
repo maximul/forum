@@ -12,9 +12,13 @@
         
         if ($msg_c) {
             
-            $sql = "INSERT INTO messages (msg_tid, msg_uid, msg_date, msg_content) VALUES ($tid, $uid, '$msg_date', '$msg_c')";
+            $sql = "INSERT INTO messages (msg_tid, msg_uid, msg_date, msg_content) VALUES ('%d', '%d', '%s', '%s')";
+            $query = sprintf($sql, (int)$tid,
+                                (int)$uid,
+                                mysqli_real_escape_string($link, $msg_date),
+                                mysqli_real_escape_string($link, $msg_c));
             
-            $result = mysqli_query($link, $sql);
+            $result = mysqli_query($link, $query);
         }
         
         header("Location: ".$_SERVER["PHP_SELF"]."?tid=$tid&uid=$uid&start=$start");

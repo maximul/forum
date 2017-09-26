@@ -40,9 +40,9 @@
             
         //Запрос
         $sql = "UPDATE settings SET per_page_themes='%d', per_page_msg='%d', per_chunk_links='%d'"; 
-        $query = sprintf($sql, $per_page_themes, 
-                             $per_page_msg,
-                             $per_chunk_links);
+        $query = sprintf($sql, (int)$per_page_themes, 
+                             (int)$per_page_msg,
+                             (int)$per_chunk_links);
         
         $result = mysqli_query($link, $query);
         
